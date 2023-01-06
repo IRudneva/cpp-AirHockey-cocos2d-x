@@ -1,0 +1,36 @@
+#pragma once
+#include "cocos2d.h"
+
+namespace domain
+{
+static const cocos2d::Size FRAME_SIZE(472, 803);
+static const float BORDER_BUFF = 7.0f;
+static const float GOAL_WIDTH = 270.0f;
+static const int MAX_GOAL = 5;
+
+static const int AMOUNT_GAME_OBJECTS = 3;
+}
+
+enum ObjectType {
+	BALL,
+	PLAYER,
+	SMART_PLAYER,
+
+	NONE
+};
+
+enum EventType {
+	START_GAME,
+	GOAL_PLAYER,
+	GOAL_SMART_PLAYER,
+	COLLISION_WITH_AXES_X_RIGHT,
+	COLLISION_WITH_AXES_X_LEFT,
+	COLLISION_WITH_AXES_Y_UP,
+	COLLISION_WITH_AXES_Y_DOWN,
+	PLAYER_HALF_FIELD_CROSSING,
+	SMART_PLAYER_HALF_FIELD_CROSSING,
+	COLLISION_BALL_WITH_PLAYER,
+	COLLISION_BALL_WITH_SMART_PLAYER,
+
+	NO_EVENT
+};
